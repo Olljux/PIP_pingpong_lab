@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  app1:
+    build: .
+    ports:
+      - "5001:5000"
+    environment:
+      - PORT=5000
+      - MESSAGE=pong from APP 1
+
+  app2:
+    build: .
+    ports:
+      - "5002:5000"
+    environment:
+      - PORT=5000
+      - MESSAGE=pong from APP 2
